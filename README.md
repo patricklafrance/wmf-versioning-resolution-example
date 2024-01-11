@@ -59,3 +59,7 @@ Open a browser at http://localhost:8080/.
 The remote module entries are available at:
 - http://localhost:8081/remoteEntry.js for remote-1
 - http://localhost:8082/remoteEntry.js for remote-2
+
+### Conclusion
+
+The goal of this POC is to validate that the singleton version resolution algorithm of Module Federation works well with `@workleap/orbiter-ui`. By configuring `@workleap/orbiter-ui` as a singleton on the "host" application and the "remote-1" application, even if the "host" application is on `@workleap/orbiter-ui` version `2.0.0` and the "remote-1" application is `@workleap/orbiter-ui` version `2.2.0`, a single bundle of the `@workleap/orbiter-ui` library is loaded for version `2.2.0`.

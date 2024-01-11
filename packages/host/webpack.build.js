@@ -2,7 +2,13 @@
 
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ModuleFederationPlugin from "webpack/lib/container/ModuleFederationPlugin.js";
-import path from "path";
+import path from "node:path";
+import { createRequire } from "node:module";
+
+// Using node:module.createRequire until
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/import.meta/resolve
+// is available
+const require = createRequire(import.meta.url);
 
 /** @type {import("webpack").Configuration} */
 export default {
@@ -35,6 +41,15 @@ export default {
                 }
             },
             {
+                test: /\.css$/i,
+                use: [
+                    { loader: require.resolve("style-loader") },
+                    {
+                        loader: require.resolve("css-loader")
+                    }
+                ]
+            },
+            {
                 test: /\.(png|jpe?g|gif)$/i,
                 type: "asset/resource"
             }
@@ -49,12 +64,10 @@ export default {
             },
             shared: {
                 "react": {
-                  singleton: true,
-                  strictVersion: true
+                  singleton: true
                 },
                 "react-dom": {
-                  singleton: true,
-                  strictVersion: true
+                  singleton: true
                 }
             }
         }),
