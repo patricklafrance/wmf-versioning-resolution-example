@@ -22,7 +22,6 @@ Open a browser at http://localhost:8080/.
 
 The remote module entries are available at:
 - http://localhost:8081/remoteEntry.js for remote-1
-- http://localhost:8082/remoteEntry.js for remote-2
 
 If you prefer to start the application and modules separately:
 
@@ -53,7 +52,6 @@ Open a browser at http://localhost:8080/.
 
 The remote module entries are available at:
 - http://localhost:8081/remoteEntry.js for remote-1
-- http://localhost:8082/remoteEntry.js for remote-2
 
 ### Conclusion
 
