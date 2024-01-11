@@ -57,4 +57,4 @@ The remote module entries are available at:
 
 ### Conclusion
 
-By configuring `@workleap/orbiter-ui` as a singleton on the "host" application and the "remote-1" application, even if the "host" application is on `@workleap/orbiter-ui` version `2.0.0` and the "remote-1" application is `@workleap/orbiter-ui` version `2.2.0`, a single bundle of the `@workleap/orbiter-ui` library is loaded for version `2.2.0`.
+By configuring `@workleap/orbiter-ui` as a singleton on the "host" application and the "remote-1" application, even if the "host" application is on `@workleap/orbiter-ui` version `2.0.0` and the "remote-1" application is `@workleap/orbiter-ui` version `2.2.2`, a single bundle of the `@workleap/orbiter-ui` library is loaded for version `2.2.2`.
