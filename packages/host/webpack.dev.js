@@ -59,7 +59,6 @@ export default {
             name: "host",
             remotes: {
                 remote1: "remote1@http://localhost:8081/remoteEntry.js"
-                // remote2: "remote2@http://localhost:8082/remoteEntry.js"
             },
             shared: {
                 "react": {

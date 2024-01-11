@@ -35,8 +35,6 @@ export function App() {
             </div>
             <br /><br />
             <Remote1HelloWorld />
-            {/* <br /><br />
-            <Remote2HelloWorld /> */}
         </>
     );
 }

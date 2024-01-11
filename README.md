@@ -1,11 +1,6 @@
-# wmf-poc-template
+# wmf-versioning-resolution-example
 
-This is a template to create POC related to [Webpack Module Federation](https://webpack.js.org/concepts/module-federation/).
-
-The template contains 3 applications:
-- An [host application](./packages/host/)
-- A remote module named [remote-1](./packages/remote-1/)
-- A remote module named [remote-2](./packages/remote-2/)
+The goal of this POC is to validate that the singleton version resolution algorithm of Module Federation works well with `@workleap/orbiter-ui`.
 
 ## Usage
 
@@ -62,4 +57,4 @@ The remote module entries are available at:
 
 ### Conclusion
 
-The goal of this POC is to validate that the singleton version resolution algorithm of Module Federation works well with `@workleap/orbiter-ui`. By configuring `@workleap/orbiter-ui` as a singleton on the "host" application and the "remote-1" application, even if the "host" application is on `@workleap/orbiter-ui` version `2.0.0` and the "remote-1" application is `@workleap/orbiter-ui` version `2.2.0`, a single bundle of the `@workleap/orbiter-ui` library is loaded for version `2.2.0`.
+By configuring `@workleap/orbiter-ui` as a singleton on the "host" application and the "remote-1" application, even if the "host" application is on `@workleap/orbiter-ui` version `2.0.0` and the "remote-1" application is `@workleap/orbiter-ui` version `2.2.0`, a single bundle of the `@workleap/orbiter-ui` library is loaded for version `2.2.0`.

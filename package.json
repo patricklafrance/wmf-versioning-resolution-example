@@ -1,7 +1,7 @@
 {
   "name": "wmf-poc-template",
   "version": "1.0.0",
-  "description": "Template to create POC related to Webpack Module Federation",
+  "description": "POC to showcase WMF singletion versioning resolution.",
   "private": true,
   "scripts": {
     "dev": "pnpm -r --parallel dev",
