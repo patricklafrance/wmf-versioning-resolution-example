@@ -2,7 +2,6 @@ import { lazy } from "react";
 import { Tabs, Item, Header, Content } from "@workleap/orbiter-ui";
 
 const Remote1HelloWorld = lazy(() => import("remote1/HelloWorld.jsx"));
-// const Remote2HelloWorld = lazy(() => import("remote2/HelloWorld.jsx"));
 
 export function App() {
     return (

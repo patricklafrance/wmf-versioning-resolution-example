@@ -56,3 +56,9 @@ The remote module entries are available at:
 ### Conclusion
 
 By configuring `@workleap/orbiter-ui` as a singleton on the "host" application and the "remote-1" application, even if the "host" application is on `@workleap/orbiter-ui` version `2.0.0` and the "remote-1" application is `@workleap/orbiter-ui` version `2.2.2`, a single bundle of the `@workleap/orbiter-ui` library is loaded for version `2.2.2`.
+
+#### Update
+
+After further investigation, the issue that we are encountering with Module Federation singleton version resolution is due to the fact that Squide is using a dynamic remote container to load the remote modules. By using the native ModuleFederationPlugin the issue goes away.
+
+The reason the dynamic remote container approach is not working for Squide at the moment is because the `init` function of the Module Federation should a receive a second arguments that includes an array of Promises of the other modules that are expected to be loaded.
