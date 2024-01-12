@@ -44,9 +44,9 @@ export default {
             {
                 test: /\.css$/i,
                 use: [
-                    { loader: "style-loader" },
+                    { loader: require.resolve("style-loader") },
                     {
-                        loader: "css-loader"
+                        loader: require.resolve("css-loader")
                     }
                 ]
             },

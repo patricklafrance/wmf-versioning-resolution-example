@@ -65,7 +65,7 @@ export default {
                   singleton: true
                 },
                 "react-dom": {
-                  singleton: true,
+                  singleton: true
                 },
                 "@workleap/orbiter-ui": {
                     singleton: true
